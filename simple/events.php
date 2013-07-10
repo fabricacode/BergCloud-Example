@@ -1,7 +1,7 @@
 <?php
     // RETURN A JSON WITH THE PRODUCT EVENTS STORED IN THE DATABASE
     // RESULTS CAN BE FILTERED BY DEVICE ADDRESS/EVENTNAME/PIN/PIN TYPE (ANALOG-DIGITAL)
-    // EXAMPLE: ..../berg/simple/events.php?event=lighton&address=347829347982374&num=12 
+    // EXAMPLE: ..../berg/simple/events.php?event=YOUREVENT&address=YOURDEVICEADDRESS&num=12 
      try
   {
     $database = new SQLiteDatabase('eventsDb.sqlite', 0666, $error);
@@ -27,7 +27,7 @@
    	}
    	if(!empty($address)) {
   		if(!$gotevents){
-  			$query = $query." WHERE address = '".$event."' ";
+  			$query = $query." WHERE address = '".$address."' ";
   		}
   		else{
   			$query = $query." AND address = '".$address."' ";
