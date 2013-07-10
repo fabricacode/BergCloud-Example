@@ -30,7 +30,7 @@
    	}
    	if(!empty($address)) {
   		if(!$wroteWhereCondition){
-  			$query = $query." WHERE address = '".$event."' ";
+  			$query = $query." WHERE address = '".$address."' ";
   		}
   		else{
   			$query = $query." AND address = '".$address."' ";
